@@ -1,0 +1,23 @@
+
+1->numbers like we can just write 1+1-->2
+2->string like -- "amit"*3  -->amit amit amit
+3->boolean && || !
+3->when using decimal value :  we need to give like 5.0/3-->0.4445
+4->array ; it is like my_array=[10,twelve,30,.....]
+we can give both the no as well as string
+5->hashes
+irb(main):044:0> who_am_i = { :f_n=>"amit", :l_n=>"kumar"}
+=> {:f_n=>"amit", :l_n=>"kumar"}
+
+6->Constant
+  just start with Capital letter
+  eg: Pi=3.14
+
+7->Well you do get the same response. So whats the difference between single and double quotes? Take
+a look at the following example
+>> time_now = Time.new # Get the current time into a variable 
+=> Fri Jan 15 16:43:31 +0530 2010 
+>> "Hello world, the time is now #{time_now}" 
+=> "Hello world, the time is now Fri Jan 15 16:43:31 +0530 2010" 
+>> 'Hello world, the time is now #{time_now}' 
+=> "Hello world, the time is now \#{time_now}" 
