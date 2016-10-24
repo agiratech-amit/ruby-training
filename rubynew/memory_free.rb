@@ -1,43 +1,31 @@
-class Memory
-  def initialize output
-  		@output=output
-  	end
+class MemoryCount
 
-  def find_Toatal	  
-	  puts "Total Space         =>#{@output.split(" ")[7]}"
-
-	  find_Used
-
-	end
-
-	private
-
-	  def find_Used
-		puts "Total Used Space    =>#{@output.split(" ")[8]}"
-
-	find_Free
-
-	end
-
-	protected
-
-  def find_Free
-		puts "Total Free Space    =>#{@output.split(" ")[9]}"
-
-     find_Shared
-
-    end
-
-  def find_Shared
-  	 	puts "Total Shared Spaace =>#{@output.split(" ")[10]}"
-   end
-
-
+  def initialize(output)
+    #initializing output
+    @output=output
+  end
+  def find_total_size
+    puts "Total Space=>#{@output.split(" ")[7]}"
+    #calling another private method
+    find_used_memory
+  end
+  private
+  def find_used_memory
+    puts "Total Used Space=>#{@output.split(" ")[8]}"
+    #calling another protected method
+    find_available_memory
+  end
+  protected
+  def find_available_memory
+    puts "Total Free Space=>#{@output.split(" ")[9]}"
+    #calling another method
+    find_shared_memory
+  end
+  def find_shared_memory
+    puts "Total Shared Spaace =>#{@output.split(" ")[10]}"
+  end
 end
 
 temp=%x(free)
-obj=Memory.new temp
-obj.find_Toatal
-
-     
-
+obj=Memory.new(temp)
+obj.find_total_size
